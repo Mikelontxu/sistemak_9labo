@@ -11,3 +11,10 @@
 • Red: “default”
 • Subred: Utilizar el rango de IPs 10.10.0.0/28
 5- Cloud Run --> Services --> Create Service
+• Imagen: la que se ha creado al inicio en DockerHub (docker.io/mikelontxu/as-laboratorio9-web:latest)
+• Autenticación: permitir invocaciones no autenticadas.
+• Puerto del contenedor: 80
+• Crear una variable de entorno llamada REDISHOST, donde se indique la IP de la instancia Redis. Esta IP
+la podéis encontrar en los detalles de la instancia Redis.
+• En el apartado de conectividad, indicar que se conecte a una VPC para el tráfico saliente y que use el
+conector creado en el paso anterior.
