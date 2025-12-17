@@ -2,18 +2,15 @@ FROM python:3.7-alpine
 
 WORKDIR /code
 
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-ENV FLASK_RUN_PORT=80
-
 RUN apk add --no-cache gcc musl-dev linux-headers
 
 COPY requirements.txt /code/requirements.txt
-
-RUN pip install -r requirements.txt
-
-EXPOSE 80
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app.py /code/app.py
 
-CMD ["flask","run","-p","80"]
+ENV PORT=80
+
+EXPOSE 80
+
+CMD ["gunicorn", "-b", "0.0.0.0:${PORT}", "app:app"]

@@ -24,3 +24,5 @@ def hello():
     count = get_hit_count()
     return 'Kaixo! Este sitio se ha visitado {} veces. Merendola \n'.format(count)
 
+# IP redis
+# 10.30.48.35/29

@@ -2,8 +2,12 @@
 2- Sortu Dockerhub irudia
 3- Sortu Redis instantzia Memorystore zerbitzuarekin (activar API):
 • Tipo: Básico
+• Region: misma que abajo
 • Capacidad: 1 GB
 • Red: “default”
 • Tipo de conexión: “Direct peering” / Intercambio de tráfico directo.
-
-
+4- Sortu VPC network barruan Serverless VPC access (activar API):
+• Region: misma que arriba
+• Red: “default”
+• Subred: Utilizar el rango de IPs 10.10.0.0/28
+5- Cloud Run --> Services --> Create Service
