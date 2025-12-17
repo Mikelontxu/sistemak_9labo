@@ -1,0 +1,9 @@
+1- Clone github eta aldatu fitxategiak (app.py eta Dockerfile)
+2- Sortu Dockerhub irudia
+3- Sortu Redis instantzia Memorystore zerbitzuarekin (activar API):
+• Tipo: Básico
+• Capacidad: 1 GB
+• Red: “default”
+• Tipo de conexión: “Direct peering” / Intercambio de tráfico directo.
+
+
